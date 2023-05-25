@@ -4,12 +4,11 @@
 using UnityEngine.InputSystem;
 using TMPro;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     // Create public variables for player speed, and for the Text UI game objects
     public float speed = 0;
     public TextMeshProUGUI countText;
-    public GameObject winTextObject; 
+    public GameObject winTextObject;
     public Vector3 previousAcceleration = Vector3.zero;
 
     private Rigidbody ballRigidBody;
@@ -17,24 +16,24 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
     private float movementZ;
-        
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         // Assign the Rigidbody component to our privated variable
         ballRigidBody = GetComponent<Rigidbody>();
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
 
         // Set the count to zero
         count = 0;
 
         SetCountText();
-        
+
         // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
         winTextObject.SetActive(false);
     }
 
-    void OnMove(InputValue movementValue)
-    {
+    void OnMove(InputValue movementValue) {
         Vector2 movementVector = movementValue.Get<Vector2>();
 
         movementX = movementVector.x;
@@ -42,69 +41,60 @@ public class PlayerController : MonoBehaviour
         UnityEngine.Debug.Log("I m in move");
     }
 
-    void OnLook(InputValue lookValue)
-    {
+    void OnLook(InputValue lookValue) {
         Vector2 lookVector = lookValue.Get<Vector2>();
 
         movementX = lookVector.x;
         movementY = lookVector.y;
     }
 
-    // void OnTilt(InputValue accelerationValue)
-    // {
-    //     Vector3 movementVector = accelerationValue.Get<Vector3>();
+    void OnTilt(InputValue accelerationValue) {
+        Vector3 movementVector = accelerationValue.Get<Vector3>();
 
-    //     movementX = movementVector.x;
-    //     movementY = movementVector.y;
-    //     movementZ = movementVector.z;
+        movementX = movementVector.x;
+        movementY = movementVector.y;
+        movementZ = movementVector.z;
 
-    //     Debug.Log(movementVector);
+        Debug.Log(movementVector);
+    }
+
+    // void OnEnable() {
+    //     InputSystem.EnableDevice(Accelerometer.current);
+    // }
+    //
+    // void OnDisable() {
+    //     InputSystem.DisableDevice(Accelerometer.current);
     // }
 
-    void OnEnable()
-    {
-        InputSystem.EnableDevice(Accelerometer.current);        
-    }
-
-    void OnDisable()
-    {
-        InputSystem.DisableDevice(Accelerometer.current);        
-    }
-    
-    void SetCountText()
-    {
+    void SetCountText() {
         countText.text = "Count: " + count.ToString();
-        if(count >= 12)
-        {
+
+        if (count >= 12) {
             // Set the text value of your 'winText'
             winTextObject.SetActive(true);
         }
     }
 
-    void Update()
-    {
-        var acceleration = Accelerometer.current.acceleration.ReadValue();
-        if (acceleration != previousAcceleration)
-        {
-            Debug.Log(acceleration);
-            previousAcceleration = acceleration;
-            ballRigidBody.AddForce(acceleration);
-        }
-    }
+    // void Update() {
+    //     var acceleration = Accelerometer.current.acceleration.ReadValue();
+    //     
+    //     if (acceleration != previousAcceleration) {
+    //         Debug.Log(acceleration);
+    //         previousAcceleration = acceleration;
+    //         ballRigidBody.AddForce(acceleration);
+    //     }
+    // }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         // Create a Vector3 variable, and assign X and Z to feature the horizontal and vertical float variables above
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        
+
         ballRigidBody.AddForce(movement * speed);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other) {
         // ..and if the GameObject you intersect has the tag 'Pick Up' assigned to it..
-        if (other.gameObject.CompareTag("PickUp"))
-        {
+        if (other.gameObject.CompareTag("PickUp")) {
             other.gameObject.SetActive(false);
 
             // Add one to the score variable 'count'

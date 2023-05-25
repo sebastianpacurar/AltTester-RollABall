@@ -1,0 +1,511 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073b5878cbef2364cb928faafba64ca5, type: 3}
+  m_Name: AltTesterEditorSettings
+  m_EditorClassIdentifier: 
+  appendToName: 0
+  AdbPath: /usr/local/bin/adb
+  IProxyPath: /usr/local/bin/iproxy
+  XcrunPath: /usr/bin/xcrun
+  MyTests:
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 11
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 11
+  - _selected: 0
+    _testName: Editor
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestSuite
+    _parentName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+    _testCaseCount: 11
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 11
+  - _selected: 0
+    _testName: Editor.Tests
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestSuite
+    _parentName: Editor
+    _testCaseCount: 11
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 11
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: Editor.Tests
+    _testCaseCount: 11
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 11
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestBallMovesOnPressKeys
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 13.4224564
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestBeginMoveEndTouchMovesScrollbar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0.6825024
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestClickNearScrollBarMovesScrollBar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: "  Expected: not equal to 811.0f\n  But was:  811.0f\n"
+    _testStackTrace: 'at Editor.Tests.TestsAltTester.TestClickNearScrollBarMovesScrollBar
+      () [0x000cb] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Assets/Editor/Tests/Tests_AltTester.cs:92
+
+'
+    _testDuration: 1.7656838
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestDoubleClick
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: "  String lengths are both 1. Strings differ at index 0.\n 
+      Expected: \"2\"\n  But was:  \"0\"\n  -----------^\n"
+    _testStackTrace: 'at Editor.Tests.TestsAltTester.TestDoubleClick () [0x0006f]
+      in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Assets/Editor/Tests/Tests_AltTester.cs:196
+
+'
+    _testDuration: 1.873109
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestKeyDownAndKeyUpMouse0MovesScrollBar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: "  Expected: not equal to 1.00000024f\n  But was:  1.00000024f\n"
+    _testStackTrace: 'at Editor.Tests.TestsAltTester.TestKeyDownAndKeyUpMouse0MovesScrollBar
+      () [0x000df] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Assets/Editor/Tests/Tests_AltTester.cs:141
+
+'
+    _testDuration: 1.7531859
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestMoveBallWithMoveMouse
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 9.8735302
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestMoveMouseOnScrollbar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: "  Expected: not equal to 811.0f\n  But was:  811.0f\n"
+    _testStackTrace: 'at Editor.Tests.TestsAltTester.TestMoveMouseOnScrollbar ()
+      [0x000b9] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Assets/Editor/Tests/Tests_AltTester.cs:61
+
+'
+    _testDuration: 1.0095729
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestPressKeyNearScrollBarMovesScrollBar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: "  Expected: not equal to 811.0f\n  But was:  811.0f\n"
+    _testStackTrace: 'at Editor.Tests.TestsAltTester.TestPressKeyNearScrollBarMovesScrollBar
+      () [0x0009a] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Assets/Editor/Tests/Tests_AltTester.cs:124
+
+'
+    _testDuration: 1.7929874
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestScrollOnScrollbar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: "  Expected: not equal to 1.00000024f\n  But was:  1.00000024f\n"
+    _testStackTrace: 'at Editor.Tests.TestsAltTester.TestScrollOnScrollbar () [0x000aa]
+      in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Assets/Editor/Tests/Tests_AltTester.cs:47
+
+'
+    _testDuration: 2.7754526
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestSwipeOnScrollbar
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 3.6452895
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: Editor.Tests.TestsAltTester.TestTiltBall
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.TestsAltTester
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 3.5537476
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
+    _testAssembly: Unity.VisualStudio.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+    _testAssembly: UnityEngine.TestRunner
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+    _testAssembly: UnityEditor.TestRunner
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Unity.Rider.Editor.dll
+    _testAssembly: Unity.Rider.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll
+    _testAssembly: Unity.InputSystem.IntegrationTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 2
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: IntegrationTests
+    _testAssembly: Unity.InputSystem.IntegrationTests
+    _status: -1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll
+    _testCaseCount: 2
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: IntegrationTests.Integration_CanChangeInputBackendPlayerSettingInEditor
+    _testAssembly: Unity.InputSystem.IntegrationTests
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: IntegrationTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 'UnityEngine.UnityException : FindObjectsOfTypeAll can only
+      be called from the main thread.
+
+      Constructors and field initializers
+      will be executed from the loading thread when loading a scene.
+
+      Don''t
+      use this function in the constructor or field initializers, instead move initialization
+      code to the Awake or Start function.'
+    _testStackTrace: "  at (wrapper managed-to-native) UnityEngine.ResourcesAPIInternal.FindObjectsOfTypeAll(System.Type)\n 
+      at UnityEngine.ResourcesAPI.FindObjectsOfTypeAll (System.Type systemTypeInstance)
+      [0x00000] in /home/bokken/build/output/unity/unity/Runtime/Export/Resources/Resources.bindings.cs:69
+      \n  at UnityEngine.Resources.FindObjectsOfTypeAll (System.Type type) [0x00001]
+      in /home/bokken/build/output/unity/unity/Runtime/Export/Resources/Resources.bindings.cs:100
+      \n  at UnityEngine.Resources.FindObjectsOfTypeAll[T] () [0x00001] in /home/bokken/build/output/unity/unity/Runtime/Export/Resources/Resources.bindings.cs:105
+      \n  at UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers.GetPropertyOrNull
+      (System.String name) [0x00001] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Editor/Settings/EditorPlayerSettingHelpers.cs:157
+      \n  at UnityEngine.InputSystem.Editor.EditorPlayerSettingHelpers.get_oldSystemBackendsEnabled
+      () [0x00001] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Editor/Settings/EditorPlayerSettingHelpers.cs:65
+      \n  at IntegrationTests.Integration_CanChangeInputBackendPlayerSettingInEditor
+      () [0x00001] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/Tests/IntegrationTests/IntegrationTests.cs:97
+      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <56af3bfda3de4922902bfa6b4d78d122>:0 "
+    _testDuration: 0.0082538
+    path: Packages/com.unity.inputsystem/Tests/IntegrationTests
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: IntegrationTests.Integration_CanSendAndReceiveEvents
+    _testAssembly: Unity.InputSystem.IntegrationTests
+    _status: -1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: IntegrationTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 'UnityEngine.UnityException : AllocateDeviceId can only be
+      called from the main thread.
+
+      Constructors and field initializers will
+      be executed from the loading thread when loading a scene.
+
+      Don''t use
+      this function in the constructor or field initializers, instead move initialization
+      code to the Awake or Start function.'
+    _testStackTrace: "  at (wrapper managed-to-native) UnityEngineInternal.Input.NativeInputSystem.AllocateDeviceId()\n 
+      at UnityEngine.InputSystem.LowLevel.NativeInputRuntime.AllocateDeviceId ()
+      [0x00001] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/NativeInputRuntime.cs:27
+      \n  at UnityEngine.InputSystem.InputManager.AssignUniqueDeviceId (UnityEngine.InputSystem.InputDevice
+      device) [0x0004f] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/InputManager.cs:2042
+      \n  at UnityEngine.InputSystem.InputManager.AddDevice (UnityEngine.InputSystem.InputDevice
+      device) [0x0004d] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/InputManager.cs:1093
+      \n  at UnityEngine.InputSystem.InputManager.AddDevice (System.String layout,
+      System.String name, UnityEngine.InputSystem.Utilities.InternedString variants)
+      [0x00046] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/InputManager.cs:1050
+      \n  at UnityEngine.InputSystem.InputManager.AddDevice (System.Type type, System.String
+      name) [0x00030] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/InputManager.cs:1035
+      \n  at UnityEngine.InputSystem.InputSystem.AddDevice[TDevice] (System.String
+      name) [0x00001] in /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/InputSystem.cs:1446
+      \n  at IntegrationTests.Integration_CanSendAndReceiveEvents () [0x00001] in
+      /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/PackageCache/com.unity.inputsystem@1.5.1/Tests/IntegrationTests/IntegrationTests.cs:75
+      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <56af3bfda3de4922902bfa6b4d78d122>:0 "
+    _testDuration: 0.0022336
+    path: Packages/com.unity.inputsystem/Tests/IntegrationTests
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/Unity.InputSystem.TestFramework.dll
+    _testAssembly: Unity.InputSystem.TestFramework
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/AltTester.dll
+    _testAssembly: AltTester
+    _status: 1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: TestExample
+    _testAssembly: AltTester
+    _status: 1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/AltTester.dll
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: TestExample.Test
+    _testAssembly: AltTester
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: TestExample
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0.0000988
+    path: Assets/AltTester/Editor/DefaultTestExample.txt
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/RollABall/Library/ScriptAssemblies/AltTesterEditor.dll
+    _testAssembly: AltTesterEditor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: /home/sebipacurar/Documents/my-git/EXAMPLES-NewInputSystem--RollABall-CSharp/data-0x560d83f76e10
+    _testAssembly: JetBrains.Rider.Unity.Editor.Plugin.Net46.Repacked
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  Scenes:
+  - _toBeBuilt: 1
+    _path: Assets/Scenes/MiniGame.unity
+    _buildIndex: 0
+  platform: 1
+  StandaloneTarget: 5
+  RanInEditor: 1
+  ScenePathDisplayed: 0
+  InputVisualizer: 0
+  ShowPopUp: 1
+  BuildLocationPath: 
+  LatestDesktopVersion: 
+  ShowDesktopPopUpInEditor: 0
+  createXMLReport: 0
+  xMLFilePath: 
+  AltTesterPort: 13000
+  KeepAUTSymbolDefined: 1
