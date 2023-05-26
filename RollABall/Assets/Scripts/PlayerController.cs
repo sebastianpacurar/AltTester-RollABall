@@ -1,7 +1,5 @@
-﻿using UnityEngine;
-
-// Include the namespace required to use Unity UI and Input System
-using UnityEngine.InputSystem;
+﻿using Input;
+using UnityEngine;
 using TMPro;
 
 public class PlayerController : MonoBehaviour {
@@ -11,96 +9,46 @@ public class PlayerController : MonoBehaviour {
     public GameObject winTextObject;
     public Vector3 previousAcceleration = Vector3.zero;
 
-    private Rigidbody ballRigidBody;
-    private int count;
-    private float movementX;
-    private float movementY;
-    private float movementZ;
+    private Rigidbody _rb;
+    private int _count;
+
+    private InputManager _inputManager;
+    private Vector2 _moveVal;
+
+    private void Awake() {
+        _rb = GetComponent<Rigidbody>();
+    }
 
     // Start is called before the first frame update
-    void Start() {
-        // Assign the Rigidbody component to our privated variable
-        ballRigidBody = GetComponent<Rigidbody>();
-        // Cursor.lockState = CursorLockMode.Locked;
-        // Cursor.visible = false;
-
-        // Set the count to zero
-        count = 0;
-
+    private void Start() {
+        _inputManager = InputManager.Instance;
         SetCountText();
-
-        // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
         winTextObject.SetActive(false);
     }
 
-    void OnMove(InputValue movementValue) {
-        Vector2 movementVector = movementValue.Get<Vector2>();
+    private void SetCountText() {
+        countText.text = $"Count: {_count}";
 
-        movementX = movementVector.x;
-        movementY = movementVector.y;
-        UnityEngine.Debug.Log("I m in move");
-    }
-
-    void OnLook(InputValue lookValue) {
-        Vector2 lookVector = lookValue.Get<Vector2>();
-
-        movementX = lookVector.x;
-        movementY = lookVector.y;
-    }
-
-    void OnTilt(InputValue accelerationValue) {
-        Vector3 movementVector = accelerationValue.Get<Vector3>();
-
-        movementX = movementVector.x;
-        movementY = movementVector.y;
-        movementZ = movementVector.z;
-
-        Debug.Log(movementVector);
-    }
-
-    // void OnEnable() {
-    //     InputSystem.EnableDevice(Accelerometer.current);
-    // }
-    //
-    // void OnDisable() {
-    //     InputSystem.DisableDevice(Accelerometer.current);
-    // }
-
-    void SetCountText() {
-        countText.text = "Count: " + count.ToString();
-
-        if (count >= 12) {
+        if (_count >= 12) {
             // Set the text value of your 'winText'
             winTextObject.SetActive(true);
         }
     }
 
-    // void Update() {
-    //     var acceleration = Accelerometer.current.acceleration.ReadValue();
-    //     
-    //     if (acceleration != previousAcceleration) {
-    //         Debug.Log(acceleration);
-    //         previousAcceleration = acceleration;
-    //         ballRigidBody.AddForce(acceleration);
-    //     }
-    // }
+    private void Update() => _moveVal = !_inputManager.IsPaused ? _inputManager.LookInput : Vector2.zero;
 
-    void FixedUpdate() {
-        // Create a Vector3 variable, and assign X and Z to feature the horizontal and vertical float variables above
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+    private void FixedUpdate() => ApplyPhysics();
 
-        ballRigidBody.AddForce(movement * speed);
+    private void ApplyPhysics() {
+        _rb.AddForce(new Vector3(_moveVal.x, 0.0f, _moveVal.y) * speed);
+        _rb.drag = _inputManager.IsPaused ? 2.5f : 0f;
+        _rb.angularDrag = _inputManager.IsPaused ? 2.5f : 0.05f;
     }
 
     private void OnTriggerEnter(Collider other) {
-        // ..and if the GameObject you intersect has the tag 'Pick Up' assigned to it..
         if (other.gameObject.CompareTag("PickUp")) {
             other.gameObject.SetActive(false);
-
-            // Add one to the score variable 'count'
-            count++;
-
-            // Run the 'SetCountText()' function (see below)
+            _count++;
             SetCountText();
         }
     }
