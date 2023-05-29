@@ -565,7 +565,7 @@ MonoBehaviour:
     _buildIndex: 0
   platform: 1
   StandaloneTarget: 5
-  RanInEditor: 0
+  RanInEditor: 1
   ScenePathDisplayed: 0
   InputVisualizer: 0
   ShowPopUp: 1
