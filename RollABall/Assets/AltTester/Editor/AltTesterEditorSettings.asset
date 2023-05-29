@@ -24,13 +24,13 @@ MonoBehaviour:
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestAssembly
     _parentName: 
-    _testCaseCount: 15
+    _testCaseCount: 16
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 4
+    _testSelectedCount: 1
   - _selected: 0
     _testName: Editor
     _testAssembly: Assembly-CSharp-Editor
@@ -38,13 +38,13 @@ MonoBehaviour:
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestSuite
     _parentName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-    _testCaseCount: 15
+    _testCaseCount: 16
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 4
+    _testSelectedCount: 1
   - _selected: 0
     _testName: Editor.Tests
     _testAssembly: Assembly-CSharp-Editor
@@ -52,13 +52,13 @@ MonoBehaviour:
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestSuite
     _parentName: Editor
-    _testCaseCount: 15
+    _testCaseCount: 16
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 4
+    _testSelectedCount: 1
   - _selected: 0
     _testName: Editor.Tests.CanvasTests
     _testAssembly: Assembly-CSharp-Editor
@@ -67,81 +67,133 @@ MonoBehaviour:
     _type: NUnit.Framework.Internal.TestSuite
     _parentName: Editor.Tests
     _testCaseCount: 4
-    _foldOut: 1
+    _foldOut: 0
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 4
-  - _selected: 1
+    _testSelectedCount: 0
+  - _selected: 0
     _testName: Editor.Tests.CanvasTests.TogglePauseTests
     _testAssembly: Assembly-CSharp-Editor
-    _status: 1
+    _status: 0
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestFixture
     _parentName: Editor.Tests.CanvasTests
     _testCaseCount: 4
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: Editor.Tests.CanvasTests.TogglePauseTests.Add10Items
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: Editor.Tests.CanvasTests.TogglePauseTests.AddItem
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: Editor.Tests.CanvasTests.TogglePauseTests.RemoveItem
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: Editor.Tests.CanvasTests.TogglePauseTests.RemoveMultipleItems
+    _testAssembly: Assembly-CSharp-Editor
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: Editor.Tests.GamePlayTests
+    _testAssembly: Assembly-CSharp-Editor
+    _status: -1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestSuite
+    _parentName: Editor.Tests
+    _testCaseCount: 1
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 4
+    _testSelectedCount: 1
   - _selected: 1
-    _testName: Editor.Tests.CanvasTests.TogglePauseTests.Add10Items
+    _testName: Editor.Tests.GamePlayTests.PickUpTests
     _testAssembly: Assembly-CSharp-Editor
-    _status: 1
-    _isSuite: 0
-    _type: NUnit.Framework.Internal.TestMethod
-    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
+    _status: -1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: Editor.Tests.GamePlayTests
     _testCaseCount: 1
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 0.9603348
-    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
-    _testSelectedCount: 0
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 1
   - _selected: 1
-    _testName: Editor.Tests.CanvasTests.TogglePauseTests.AddItem
+    _testName: Editor.Tests.GamePlayTests.PickUpTests.TestPickupAllItems
     _testAssembly: Assembly-CSharp-Editor
-    _status: 1
+    _status: -1
     _isSuite: 0
     _type: NUnit.Framework.Internal.TestMethod
-    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
+    _parentName: Editor.Tests.GamePlayTests.PickUpTests
     _testCaseCount: 1
     _foldOut: 1
-    _testResultMessage: 
-    _testStackTrace: 
-    _testDuration: 0.6648133
-    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
-    _testSelectedCount: 0
-  - _selected: 1
-    _testName: Editor.Tests.CanvasTests.TogglePauseTests.RemoveItem
-    _testAssembly: Assembly-CSharp-Editor
-    _status: 1
-    _isSuite: 0
-    _type: NUnit.Framework.Internal.TestMethod
-    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
-    _testCaseCount: 1
-    _foldOut: 1
-    _testResultMessage: 
-    _testStackTrace: 
-    _testDuration: 0.4005685
-    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
-    _testSelectedCount: 0
-  - _selected: 1
-    _testName: Editor.Tests.CanvasTests.TogglePauseTests.RemoveMultipleItems
-    _testAssembly: Assembly-CSharp-Editor
-    _status: 1
-    _isSuite: 0
-    _type: NUnit.Framework.Internal.TestMethod
-    _parentName: Editor.Tests.CanvasTests.TogglePauseTests
-    _testCaseCount: 1
-    _foldOut: 1
-    _testResultMessage: 
-    _testStackTrace: 
-    _testDuration: 2.436732
-    path: Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs
+    _testResultMessage: 'Altom.AltDriver.AltException : Driver disconnected'
+    _testStackTrace: "  at Altom.AltDriver.Commands.DriverCommunicationWebSocket.Recvall[T]
+      (Altom.AltDriver.Commands.CommandParams param) [0x000ad] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/Commands/DriverCommunicationWebSocket.cs:109
+      \n  at Altom.AltDriver.Commands.AltMoveMouse.Execute () [0x00042] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/Commands/InputActions/AltMoveMouse.cs:17
+      \n  at Altom.AltDriver.AltDriver.MoveMouse (Altom.AltDriver.AltVector2 coordinates,
+      System.Single duration, System.Boolean wait) [0x00001] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/AltDriver.cs:357
+      \n  at Editor.Tests.GamePlayTests.PickUpTests.TestPickupAllItems () [0x0019f]
+      in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/Editor/Tests/GamePlayTests/PickUpTests.cs:42
+      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <56af3bfda3de4922902bfa6b4d78d122>:0 "
+    _testDuration: 18.5391188
+    path: Assets/Editor/Tests/GamePlayTests/PickUpTests.cs
     _testSelectedCount: 0
   - _selected: 0
     _testName: Editor.Tests.TestsAltTester
@@ -494,7 +546,7 @@ MonoBehaviour:
     path: 
     _testSelectedCount: 0
   - _selected: 1
-    _testName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/data-0x558ef958bbe0
+    _testName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/data-0x5589111e4740
     _testAssembly: JetBrains.Rider.Unity.Editor.Plugin.Net46.Repacked
     _status: 0
     _isSuite: 1
@@ -513,7 +565,7 @@ MonoBehaviour:
     _buildIndex: 0
   platform: 1
   StandaloneTarget: 5
-  RanInEditor: 1
+  RanInEditor: 0
   ScenePathDisplayed: 0
   InputVisualizer: 0
   ShowPopUp: 1

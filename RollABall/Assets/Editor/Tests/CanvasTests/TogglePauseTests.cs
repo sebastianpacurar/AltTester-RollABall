@@ -1,4 +1,3 @@
-using System;
 using Altom.AltDriver;
 using NUnit.Framework;
 
@@ -9,13 +8,12 @@ namespace Editor.Tests.CanvasTests {
         [OneTimeSetUp]
         public void SetUp() {
             _altDriver = new AltDriver();
+            _altDriver.LoadScene("MiniGame");
         }
 
-        //At the end of the test closes the connection with the socket
         [OneTimeTearDown]
         public void TearDown() {
             _altDriver.Stop();
-            _altDriver.LoadScene("MiniGame");
         }
 
 

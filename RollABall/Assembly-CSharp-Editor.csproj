@@ -44,11 +44,14 @@
      <Compile Include="Assets/Editor/Tests/Tests_AltTester.cs" />
      <Compile Include="Assets/Template/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
      <Compile Include="Assets/Editor/Tests/CanvasTests/TogglePauseTests.cs" />
+     <Compile Include="Assets/Editor/Tests/GamePlayTests/PickUpTests.cs" />
+     <Compile Include="Assets/Editor/Helpers.cs" />
      <Folder Include="Assets/Editor/Tests" />
      <Folder Include="Assets/ShortCuts/Editor" />
      <Folder Include="Assets/Editor/Tests/CanvasTests" />
      <Folder Include="Assets/Template/TutorialInfo/Scripts/Editor" />
      <Folder Include="Assets/Editor" />
+     <Folder Include="Assets/Editor/Tests/GamePlayTests" />
      <Reference Include="UnityEngine">
      <HintPath>/home/sebipacurar/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
