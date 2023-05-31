@@ -1,4 +1,8 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/home/sebipacurar/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll" /&gt;
+  &lt;Assembly Path="/home/sebipacurar/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=466ecd8c_002Dcec7_002D4e45_002D9850_002D90873f93f02f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ScrollListRemoveItem" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::3596AD83-060F-8256-4177-835F24F6B753::.NETFramework,Version=v4.7.1::Editor.Tests.MyTests.ScrollListRemoveItem&lt;/TestId&gt;

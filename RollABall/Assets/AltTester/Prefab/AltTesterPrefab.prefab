@@ -1328,7 +1328,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5275682393695888382}
   - component: {fileID: 8384657545137329710}
-  - component: {fileID: 8292478362866719213}
   - component: {fileID: 2327866330221070553}
   m_Layer: 0
   m_Name: AltTesterPrefab
@@ -1375,21 +1374,8 @@ MonoBehaviour:
     ShowPopUp: 1
   RunOnlyInDebugMode: 1
   outlineShader: {fileID: 4800000, guid: 37d07aac6f4b1dc48924e98e1e398261, type: 3}
-  panelHightlightPrefab: {fileID: 1422609480502334, guid: c2c3ede7bbf3b184c9c6d7cc4cf5cad3,
-    type: 3}
+  panelHightlightPrefab: {fileID: 1422609480502334, guid: c2c3ede7bbf3b184c9c6d7cc4cf5cad3, type: 3}
   InputsVisualizer: {fileID: 5737265885749298255}
---- !u!114 &8292478362866719213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7155360372610505065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d624c3e46e0f6e149b2b2a3ce225decd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2327866330221070553
 MonoBehaviour:
   m_ObjectHideFlags: 0
