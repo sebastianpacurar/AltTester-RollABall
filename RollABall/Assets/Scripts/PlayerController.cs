@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("PickUp")) {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             _count++;
             SetCountText();
         }
