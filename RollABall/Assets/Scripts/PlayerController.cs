@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void Update() => _moveVal = !_inputManager.IsPaused ? _inputManager.LookInput : Vector2.zero;
+    private void Update() => _moveVal = !_inputManager.IsPaused ? _inputManager.MoveInput : Vector2.zero;
 
     private void FixedUpdate() => ApplyPhysics();
 
