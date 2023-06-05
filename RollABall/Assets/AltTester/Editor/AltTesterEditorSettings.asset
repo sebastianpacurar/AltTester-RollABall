@@ -182,7 +182,7 @@ MonoBehaviour:
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 23.1790335
+    _testDuration: 22.9639315
     path: Assets/Editor/Tests/GamePlayTests/PickUpTests.cs
     _testSelectedCount: 0
   - _selected: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 8.5657353
+    _testDuration: 6.284174
     path: Assets/Editor/Tests/GamePlayTests/PickUpTests.cs
     _testSelectedCount: 0
   - _selected: 0
@@ -550,7 +550,7 @@ MonoBehaviour:
     path: 
     _testSelectedCount: 0
   - _selected: 1
-    _testName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/data-0x55716cdae220
+    _testName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/data-0x55f7802bf600
     _testAssembly: JetBrains.Rider.Unity.Editor.Plugin.Net46.Repacked
     _status: 0
     _isSuite: 1

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Vector2 = UnityEngine.Vector2;
 
 namespace Input {
     public class InputManager : MonoBehaviour {
@@ -20,7 +21,14 @@ namespace Input {
             _controls = new InputActions();
         }
 
-        private void OnMove(InputAction.CallbackContext ctx) => MoveInput = _controls.Player.Move.ReadValue<Vector2>();
+        private void OnMove(InputAction.CallbackContext ctx) {
+            MoveInput = ctx.phase switch {
+                InputActionPhase.Started or InputActionPhase.Performed => ctx.ReadValue<Vector2>(),
+                InputActionPhase.Canceled => Vector2.zero,
+                _ => Vector2.zero,
+            };
+        }
+
         private void OnLook(InputAction.CallbackContext ctx) => MoveInput = _controls.Player.Look.ReadValue<Vector2>();
         private void OnPause(InputAction.CallbackContext ctx) => IsPaused = !IsPaused;
 
@@ -31,12 +39,14 @@ namespace Input {
 
             _controls.Player.Look.performed += OnLook;
             _controls.Player.Move.performed += OnMove;
+            _controls.Player.Move.canceled += OnMove;
             _controls.UI.Pause.performed += OnPause;
         }
 
         private void OnDisable() {
             _controls.Player.Look.performed -= OnLook;
             _controls.Player.Move.performed -= OnMove;
+            _controls.Player.Move.canceled -= OnMove;
             _controls.UI.Pause.performed -= OnPause;
 
             _controls.Player.Look.Disable();

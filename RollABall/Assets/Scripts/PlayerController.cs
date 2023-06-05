@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     private int _count;
 
     private InputManager _inputManager;
-    private Vector2 _moveVal;
+    [SerializeField] private Vector2 moveVal;
 
     private void Awake() {
         _rb = GetComponent<Rigidbody>();
@@ -35,14 +35,14 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void Update() => _moveVal = !_inputManager.IsPaused ? _inputManager.MoveInput : Vector2.zero;
+    private void Update() => moveVal = !_inputManager.IsPaused ? _inputManager.MoveInput : Vector2.zero;
 
     private void FixedUpdate() => ApplyPhysics();
 
     private void ApplyPhysics() {
-        _rb.AddForce(new Vector3(_moveVal.x, 0.0f, _moveVal.y) * speed);
+        _rb.AddForce(new Vector3(moveVal.x, 0.0f, moveVal.y) * speed);
         _rb.drag = _inputManager.IsPaused ? 2.5f : 0f;
-        _rb.angularDrag = _inputManager.IsPaused ? 2.5f : 0.05f;
+        _rb.angularDrag = _inputManager.IsPaused ? 2.5f : 0.15f;
     }
 
     private void OnTriggerEnter(Collider other) {
