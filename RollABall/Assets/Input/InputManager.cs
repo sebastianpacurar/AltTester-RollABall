@@ -29,7 +29,7 @@ namespace Input {
             };
         }
 
-        private void OnLook(InputAction.CallbackContext ctx) => MoveInput = _controls.Player.Look.ReadValue<Vector2>();
+        private void OnLook(InputAction.CallbackContext ctx) { }
         private void OnPause(InputAction.CallbackContext ctx) => IsPaused = !IsPaused;
 
         private void OnEnable() {
@@ -50,6 +50,7 @@ namespace Input {
             _controls.UI.Pause.performed -= OnPause;
 
             _controls.Player.Look.Disable();
+            _controls.Player.Move.Disable();
             _controls.UI.Pause.Disable();
         }
     }

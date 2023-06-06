@@ -182,13 +182,13 @@ MonoBehaviour:
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 22.9639315
+    _testDuration: 79.1005386
     path: Assets/Editor/Tests/GamePlayTests/PickUpTests.cs
     _testSelectedCount: 0
   - _selected: 0
     _testName: Editor.Tests.GamePlayTests.PickUpTests.TestPickupAllItemsMouse
     _testAssembly: Assembly-CSharp-Editor
-    _status: 1
+    _status: 0
     _isSuite: 0
     _type: NUnit.Framework.Internal.TestMethod
     _parentName: Editor.Tests.GamePlayTests.PickUpTests
@@ -196,7 +196,7 @@ MonoBehaviour:
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 6.284174
+    _testDuration: 0
     path: Assets/Editor/Tests/GamePlayTests/PickUpTests.cs
     _testSelectedCount: 0
   - _selected: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
     _type: NUnit.Framework.Internal.TestAssembly
     _parentName: 
     _testCaseCount: 1
-    _foldOut: 0
+    _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
@@ -550,7 +550,7 @@ MonoBehaviour:
     path: 
     _testSelectedCount: 0
   - _selected: 1
-    _testName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/data-0x55f7802bf600
+    _testName: /home/sebipacurar/Documents/my-git/AltTester-RollABall/data-0x55ead78c9d80
     _testAssembly: JetBrains.Rider.Unity.Editor.Plugin.Net46.Repacked
     _status: 0
     _isSuite: 1

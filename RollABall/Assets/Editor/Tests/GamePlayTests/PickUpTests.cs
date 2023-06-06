@@ -32,7 +32,7 @@ namespace Editor.Tests.GamePlayTests {
                     try {
                         _altDriver.MoveMouse(GetMouseMoveAngle("Player", _pickupItems[i].name, i == 1 ? 5f : 20f + i), 0.0075f, false);
                     } catch {
-                        Debug.Log($"Exception caught for {_pickupItems[i].name}: Object Destroyed");
+                        Debug.Log($"Exception caught for {_pickupItems[i].name}: Object Disabled");
                         break;
                     }
                 }
@@ -43,66 +43,35 @@ namespace Editor.Tests.GamePlayTests {
         public void TestPickupAllItemsKeyboard() {
             for (var i = 1; i < _pickupItems.Count; i++) {
                 while (true) {
+                    // GetForwardVector2();
+
                     try {
-                        var ballPos = _altDriver.FindObject(By.NAME, "Player");
-                        var dir = Helpers.GetDirection2D(GetWorldPosition(ballPos.name), GetWorldPosition(_pickupItems[i].name));
-                        var dist = Helpers.Distance(GetWorldPosition(ballPos.name), GetWorldPosition(_pickupItems[i].name));
+                        var dir = Helpers.GetDirection2D(GetWorldPosition("Player"), GetWorldPosition(_pickupItems[i].name));
+                        var product = Helpers.DirDotVel(RbVel(), dir);
+
+                        switch (product) { }
+
 
                         switch (dir.y) {
                             case > 0f and < 1f:
-                                if (dist > 0f) {
-                                    PerformKeysActions(AltKeyCode.S, AltKeyCode.W);
-                                    // _altDriver.KeyDown(AltKeyCode.W);
-                                    // Debug.Log("KeyyyDown W");
-                                } else {
-                                    PerformKeysActions(AltKeyCode.W, AltKeyCode.S);
-                                    // _altDriver.KeyUp(AltKeyCode.W);
-                                    // Debug.Log("KeyyyUp W");
-                                }
-
+                                _altDriver.PressKey(AltKeyCode.W, duration: 0.1f, wait: false);
                                 break;
-                            case > -1f and < 0f:
-                                if (dist > 0f) {
-                                    PerformKeysActions(AltKeyCode.W, AltKeyCode.S);
-                                    // _altDriver.KeyDown(AltKeyCode.S);
-                                    // Debug.Log("KeyyyDown S");
-                                } else {
-                                    PerformKeysActions(AltKeyCode.S, AltKeyCode.W);
-                                    // _altDriver.KeyUp(AltKeyCode.S);
-                                    // Debug.Log("KeyyyUp S");
-                                }
+                            case > -1 and < 0:
+                                _altDriver.PressKey(AltKeyCode.S, duration: 0.1f, wait: false);
 
                                 break;
                         }
 
                         switch (dir.x) {
                             case > 0f and < 1f:
-                                if (dist > 0f) {
-                                    PerformKeysActions(AltKeyCode.A, AltKeyCode.D);
-                                    // _altDriver.KeyDown(AltKeyCode.D);
-                                    // Debug.Log("KeyyyDown D");
-                                } else {
-                                    PerformKeysActions(AltKeyCode.D, AltKeyCode.A);
-                                    // _altDriver.KeyUp(AltKeyCode.D);
-                                    // Debug.Log("KeyyyUp D");
-                                }
-
+                                _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: false);
                                 break;
-                            case > -1f and < 0f:
-                                if (dist > 0f) {
-                                    PerformKeysActions(AltKeyCode.D, AltKeyCode.A);
-                                    // _altDriver.KeyDown(AltKeyCode.A);
-                                    // Debug.Log("KeyyyDown A");
-                                } else {
-                                    PerformKeysActions(AltKeyCode.A, AltKeyCode.D);
-                                    // _altDriver.KeyUp(AltKeyCode.A);
-                                    // Debug.Log("KeyyyUp A");
-                                }
-
+                            case > -1 and < 0:
+                                _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: false);
                                 break;
                         }
                     } catch {
-                        Debug.Log($"Exception caught for {_pickupItems[i].name}: Object Destroyed");
+                        Debug.Log($"Exception caught for {_pickupItems[i].name}: Object Disabled");
                         break;
                     }
                 }
@@ -113,26 +82,11 @@ namespace Editor.Tests.GamePlayTests {
             return Helpers.GetDirection2D(GetWorldPosition(sourceName), GetWorldPosition(targetName)) * moveFactor;
         }
 
-        private float Speed() {
-            var s = _altDriver.FindObject(By.NAME, "Player").GetComponentProperty<Vector3>("UnityEngine.Rigidbody", "velocity", "UnityEngine.PhysicsModule", 3).magnitude;
-            Debug.Log($"Player Speed is {s}");
-
-            return s;
+        private AltVector2 RbVel() {
+            var v = _altDriver.FindObject(By.NAME, "Player").GetComponentProperty<Vector3>("UnityEngine.Rigidbody", "velocity", "UnityEngine.PhysicsModule", 3).normalized;
+            return new AltVector2(v.x, v.z);
         }
-
 
         private AltVector3 GetWorldPosition(string objName) => _altDriver.FindObject(By.NAME, objName).GetWorldPosition();
-
-        private void PerformKeysActions(AltKeyCode keyToRelease, AltKeyCode keyToPress) {
-            if (Speed() > 2.5f) {
-                _altDriver.KeyUp(keyToRelease);
-                _altDriver.KeyDown(keyToPress);
-            } else {
-                _altDriver.KeysDown(new[] { keyToRelease, keyToPress });
-            }
-
-
-            Debug.Log($"Released Key: {keyToRelease}; Pressed key: {keyToPress}");
-        }
     }
 }
