@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private Vector2 moveVal;
     [SerializeField] private Vector2 direction;
     [SerializeField] private Vector2 velocity;
-    [SerializeField] private Vector2 angVelocity;
     [SerializeField] private float dirDotVel;
     [SerializeField] private float dirDotAngVel;
 
@@ -92,16 +91,10 @@ public class PlayerController : MonoBehaviour {
 
         Gizmos.color = Color.green;
         Gizmos.DrawLine(pos, pos + _rb.velocity.normalized * 3f);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(pos, pos + _rb.angularVelocity.normalized * 3f);
     }
 
     private void DebugData() {
         velocity = new Vector2(_rb.velocity.x, _rb.velocity.z).normalized;
-        angVelocity = new Vector2(_rb.angularVelocity.x, _rb.angularVelocity.z).normalized;
-
         dirDotVel = Vector2.Dot(velocity, direction);
-        dirDotAngVel = Vector2.Dot(angVelocity, direction);
     }
 }

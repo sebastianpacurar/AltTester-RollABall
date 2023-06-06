@@ -174,15 +174,33 @@ MonoBehaviour:
   - _selected: 1
     _testName: Editor.Tests.GamePlayTests.PickUpTests.TestPickupAllItemsKeyboard
     _testAssembly: Assembly-CSharp-Editor
-    _status: 1
+    _status: -1
     _isSuite: 0
     _type: NUnit.Framework.Internal.TestMethod
     _parentName: Editor.Tests.GamePlayTests.PickUpTests
     _testCaseCount: 1
     _foldOut: 1
-    _testResultMessage: 
-    _testStackTrace: 
-    _testDuration: 79.1005386
+    _testResultMessage: 'System.InvalidOperationException : The current state of
+      the connection is not Open.'
+    _testStackTrace: "  at AltWebSocketSharp.WebSocket.Send (System.String data)
+      [0x0001a] in <fa7f569146a940ec97d7d09439252ce5>:0 \n  at Altom.AltDriver.Commands.AltWebSocketClient.Send
+      (System.String data) [0x00001] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/Commands/AltWebSocketClient.cs:29
+      \n  at Altom.AltDriver.Commands.DriverCommunicationWebSocket.Send (Altom.AltDriver.Commands.CommandParams
+      param) [0x0003c] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/Commands/DriverCommunicationWebSocket.cs:143
+      \n  at Altom.AltDriver.Commands.AltPressKeys.Execute () [0x00001] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/Commands/InputActions/AltPressKeys.cs:12
+      \n  at Altom.AltDriver.AltDriver.PressKeys (Altom.AltDriver.AltKeyCode[] keyCodes,
+      System.Single power, System.Single duration, System.Boolean wait) [0x00001]
+      in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/AltDriver.cs:312
+      \n  at Altom.AltDriver.AltDriver.PressKey (Altom.AltDriver.AltKeyCode keyCode,
+      System.Single power, System.Single duration, System.Boolean wait) [0x0000c]
+      in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/AltTester/AltDriver/AltDriver.cs:300
+      \n  at Editor.Tests.GamePlayTests.PickUpTests.TestPickupAllItemsKeyboard ()
+      [0x0000f] in /home/sebipacurar/Documents/my-git/AltTester-RollABall/RollABall/Assets/Editor/Tests/GamePlayTests/PickUpTests.cs:47
+      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <56af3bfda3de4922902bfa6b4d78d122>:0 "
+    _testDuration: 22.7294428
     path: Assets/Editor/Tests/GamePlayTests/PickUpTests.cs
     _testSelectedCount: 0
   - _selected: 0

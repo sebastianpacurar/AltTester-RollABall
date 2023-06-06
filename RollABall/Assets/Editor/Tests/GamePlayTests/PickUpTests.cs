@@ -44,31 +44,57 @@ namespace Editor.Tests.GamePlayTests {
             for (var i = 1; i < _pickupItems.Count; i++) {
                 while (true) {
                     // GetForwardVector2();
+                    _altDriver.PressKey(AltKeyCode.D, duration: 0.001f, wait: false);
 
                     try {
                         var dir = Helpers.GetDirection2D(GetWorldPosition("Player"), GetWorldPosition(_pickupItems[i].name));
                         var product = Helpers.DirDotVel(RbVel(), dir);
 
-                        switch (product) { }
+                        if (i == 1) {
+                            _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: true);
+                        } else {
+                            if (dir.y > 0f && dir.y < 1f) {
+                                if (product > -0.1f && product < 0.1f) {
+                                    _altDriver.PressKey(AltKeyCode.W, wait: true);
+                                    Debug.Log($"Key Pressed: W");
+                                }
 
+                                if (product < 0f) {
+                                    _altDriver.PressKey(AltKeyCode.D, duration: 0.0f, wait: true);
+                                } else if (product > 0f) {
+                                    _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: true);
+                                }
+                            } else if (dir.y > -1f && dir.y < 0f) {
+                                if (product > -0.1f && product < 0.1f) {
+                                    _altDriver.PressKey(AltKeyCode.S, wait: false);
+                                    Debug.Log($"Key Pressed: S");
+                                }
 
-                        switch (dir.y) {
-                            case > 0f and < 1f:
-                                _altDriver.PressKey(AltKeyCode.W, duration: 0.1f, wait: false);
-                                break;
-                            case > -1 and < 0:
-                                _altDriver.PressKey(AltKeyCode.S, duration: 0.1f, wait: false);
+                                if (product > 0f) {
+                                    _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: true);
+                                } else if (product < 0f) {
+                                    _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: true);
+                                }
+                            }
 
-                                break;
-                        }
-
-                        switch (dir.x) {
-                            case > 0f and < 1f:
-                                _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: false);
-                                break;
-                            case > -1 and < 0:
-                                _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: false);
-                                break;
+                            // switch (dir.y) {
+                            //     case > 0f and < 1f:
+                            //         _altDriver.PressKey(AltKeyCode.W, duration: 0.1f, wait: false);
+                            //         break;
+                            //     case > -1 and < 0:
+                            //         _altDriver.PressKey(AltKeyCode.S, duration: 0.1f, wait: false);
+                            //
+                            //         break;
+                            // }
+                            //
+                            // switch (dir.x) {
+                            //     case > 0f and < 1f:
+                            //         _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: false);
+                            //         break;
+                            //     case > -1 and < 0:
+                            //         _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: false);
+                            //         break;
+                            // }
                         }
                     } catch {
                         Debug.Log($"Exception caught for {_pickupItems[i].name}: Object Disabled");
