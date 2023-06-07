@@ -40,7 +40,11 @@ namespace Editor.Tests.GamePlayTests {
         }
 
         [Test]
+        [Ignore("Issue with complexity of Force Impulse vs timing the duration of a press. On Hold")]
         public void TestPickupAllItemsKeyboard() {
+            _altDriver.PressKey(AltKeyCode.W);
+            _altDriver.PressKey(AltKeyCode.S);
+
             for (var i = 1; i < _pickupItems.Count; i++) {
                 while (true) {
                     // GetForwardVector2();
@@ -49,52 +53,42 @@ namespace Editor.Tests.GamePlayTests {
                     try {
                         var dir = Helpers.GetDirection2D(GetWorldPosition("Player"), GetWorldPosition(_pickupItems[i].name));
                         var product = Helpers.DirDotVel(RbVel(), dir);
+                        var dist = Helpers.Distance(GetWorldPosition("Player"), GetWorldPosition(_pickupItems[i].name));
+                        
+                        
 
                         if (i == 1) {
-                            _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: true);
+                            _altDriver.PressKey(AltKeyCode.D, duration: 0.05f, wait: true);
                         } else {
+                            // if north
                             if (dir.y > 0f && dir.y < 1f) {
-                                if (product > -0.1f && product < 0.1f) {
-                                    _altDriver.PressKey(AltKeyCode.W, wait: true);
-                                    Debug.Log($"Key Pressed: W");
+                                _altDriver.PressKey(AltKeyCode.W, duration: 0.05f, wait: true);
+
+                                // north-west
+                                if (dir.x > -1f && dir.x < 0f) {
+                                    _altDriver.PressKey(AltKeyCode.A, duration: 0.05f, wait: true);
                                 }
 
-                                if (product < 0f) {
-                                    _altDriver.PressKey(AltKeyCode.D, duration: 0.0f, wait: true);
-                                } else if (product > 0f) {
-                                    _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: true);
-                                }
-                            } else if (dir.y > -1f && dir.y < 0f) {
-                                if (product > -0.1f && product < 0.1f) {
-                                    _altDriver.PressKey(AltKeyCode.S, wait: false);
-                                    Debug.Log($"Key Pressed: S");
-                                }
-
-                                if (product > 0f) {
-                                    _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: true);
-                                } else if (product < 0f) {
-                                    _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: true);
+                                // north-east
+                                else if (dir.x > 0f && dir.x < 1f) {
+                                    _altDriver.PressKey(AltKeyCode.D, duration: 0.05f, wait: true);
                                 }
                             }
 
-                            // switch (dir.y) {
-                            //     case > 0f and < 1f:
-                            //         _altDriver.PressKey(AltKeyCode.W, duration: 0.1f, wait: false);
-                            //         break;
-                            //     case > -1 and < 0:
-                            //         _altDriver.PressKey(AltKeyCode.S, duration: 0.1f, wait: false);
-                            //
-                            //         break;
-                            // }
-                            //
-                            // switch (dir.x) {
-                            //     case > 0f and < 1f:
-                            //         _altDriver.PressKey(AltKeyCode.D, duration: 0.1f, wait: false);
-                            //         break;
-                            //     case > -1 and < 0:
-                            //         _altDriver.PressKey(AltKeyCode.A, duration: 0.1f, wait: false);
-                            //         break;
-                            // }
+                            // if south
+                            else if (dir.y > -1f && dir.y < 0f) {
+                                _altDriver.PressKey(AltKeyCode.S, duration: 0.05f, wait: true);
+
+                                // south-west
+                                if (dir.x > -1f && dir.x < 0f) {
+                                    _altDriver.PressKey(AltKeyCode.A, duration: 0.05f, wait: true);
+                                }
+
+                                // south-east
+                                else if (dir.x > 0f && dir.x < 1f) {
+                                    _altDriver.PressKey(AltKeyCode.D, duration: 0.05f, wait: true);
+                                }
+                            }
                         }
                     } catch {
                         Debug.Log($"Exception caught for {_pickupItems[i].name}: Object Disabled");
@@ -106,6 +100,10 @@ namespace Editor.Tests.GamePlayTests {
 
         private AltVector2 GetMouseMoveAngle(string sourceName, string targetName, float moveFactor) {
             return Helpers.GetDirection2D(GetWorldPosition(sourceName), GetWorldPosition(targetName)) * moveFactor;
+        }
+
+        private float Speed() {
+            return _altDriver.FindObject(By.NAME, "Player").GetComponentProperty<Vector3>("UnityEngine.Rigidbody", "velocity", "UnityEngine.PhysicsModule", 3).magnitude;
         }
 
         private AltVector2 RbVel() {
